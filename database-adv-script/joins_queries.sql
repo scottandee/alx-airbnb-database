@@ -10,7 +10,8 @@ INNER JOIN users
 SELECT * 
 FROM properties
 LEFT JOIN reviews
-    ON reviews.property_id = properties.id;
+    ON reviews.property_id = properties.id
+ORDER BY properties.name ASC;
 
 -- Retrieve all users and all bookings, even if
 -- the user has no booking or a booking is not
