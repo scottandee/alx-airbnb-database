@@ -11,6 +11,4 @@ CREATE INDEX idx_property_location ON Property(location);
 CREATE INDEX idx_property_price ON Property(price);
 ```
 
-EXPLAIN SELECT * FROM Booking WHERE user_id = 1;
-
-ANALYZE SELECT * FROM Booking WHERE user_id = 1;
+EXPLAIN ANALYZE SELECT * FROM Booking WHERE user_id = 1;
