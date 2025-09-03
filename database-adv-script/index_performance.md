@@ -61,7 +61,5 @@ ANALYZE query;
 ---
 ### Examples:
 ```sql
-EXPLAIN SELECT * FROM Booking WHERE user_id = 1;
-
-ANALYZE SELECT * FROM Booking WHERE user_id = 1;
+EXPLAIN ANALYZE SELECT * FROM Booking WHERE user_id = 1;
 ```
