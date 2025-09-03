@@ -2,17 +2,17 @@
 -- is greater than 4.0 using a subquery
 SELECT *
 FROM properties
-WHERE 4 < (
+WHERE (
     SELECT AVG(rating)
-    FROM ratings
-    WHERE ratings.property_id = properties.id
-);
+    FROM reviews
+    WHERE reviews.property_id = properties.id
+) > 4 ;
 
 -- Find users who have made more than 3 bookings
 SELECT *
 FROM users
-WHERE 3 < (
+WHERE (
     SELECT COUNT(*)
     FROM bookings
     WHERE bookings.user_id = users.id
-);
+) > 3;
